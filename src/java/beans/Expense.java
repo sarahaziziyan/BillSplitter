@@ -10,6 +10,7 @@ public class Expense {
         this.name = name;
         this.amount = price;
         this.person = person;
+        person.setHowMuchSpent(person.getHowMuchSpent()+amount);
     }
 
     public String getName() {
@@ -26,6 +27,7 @@ public class Expense {
 
     public void setAmount(float amount) {
         this.amount = amount;
+        person.setHowMuchSpent(person.getHowMuchSpent()+amount);
     }
     
     
