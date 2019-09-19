@@ -2,9 +2,12 @@ package beans;
 
 public class Owes {
     
-    Person debtor;
-    Person creditor;
-    float amount;
+    private Person debtor;
+    private Person creditor;
+    private float amount;
+    
+    public Owes(){
+    }
 
     public Owes(Person debtor, Person creditor, float amount) {
         this.debtor     = debtor;

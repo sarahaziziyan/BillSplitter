@@ -2,10 +2,13 @@ package beans;
 
 public class Expense {
     
-    String name;
-    float amount;
-    Person person;
+    private String name;
+    private float amount;
+    private Person person;
 
+    public Expense() {
+    }
+    
     public Expense(String name, float price, Person person) {
         this.name = name;
         this.amount = price;
