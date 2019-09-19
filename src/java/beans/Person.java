@@ -3,10 +3,13 @@ package beans;
 public class Person {   
     
     String name;
-    String howMuchSpent;
+    float howMuchSpent;
+    float howMuchOwesToTreasury;
 
-    public Person(String name) {
+    public Person(String name, float howMuchSpent, float howMuchOwesToTreasury) {
         this.name = name;
+        this.howMuchSpent = howMuchSpent;
+        this.howMuchOwesToTreasury = howMuchOwesToTreasury;
     }
     
     public String getName() {
@@ -17,13 +20,20 @@ public class Person {
         this.name = name;
     }
 
-    public String getHowMuchSpent() {
+    public float getHowMuchSpent() {
         return howMuchSpent;
     }
 
-    public void setHowMuchSpent(String howMuchSpent) {
+    public void setHowMuchSpent(float howMuchSpent) {
         this.howMuchSpent = howMuchSpent;
     }
 
+    public float getHowMuchOwesToTreasury() {
+        return howMuchOwesToTreasury;
+    }
+
+    public void setHowMuchOwesToTreasury(float howMuchOwesToTreasury) {
+        this.howMuchOwesToTreasury = howMuchOwesToTreasury;
+    }
     
 }

@@ -3,12 +3,12 @@ package beans;
 public class Expense {
     
     String name;
-    float price;
+    float amount;
     Person person;
 
     public Expense(String name, float price, Person person) {
         this.name = name;
-        this.price = price;
+        this.amount = price;
         this.person = person;
     }
 
@@ -20,12 +20,12 @@ public class Expense {
         this.name = name;
     }
 
-    public float getPrice() {
-        return price;
+    public float getAmount() {
+        return amount;
     }
 
-    public void setPrice(float price) {
-        this.price = price;
+    public void setAmount(float amount) {
+        this.amount = amount;
     }
     
     

@@ -7,9 +7,9 @@ public class Owes {
     float amount;
 
     public Owes(Person debtor, Person creditor, float amount) {
-        this.debtor = debtor;
-        this.creditor = creditor;
-        this.amount = amount;
+        this.debtor     = debtor;
+        this.creditor   = creditor;
+        this.amount     = amount;
     }
 
     public Person getDebtor() {
