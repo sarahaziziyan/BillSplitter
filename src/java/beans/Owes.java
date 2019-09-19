@@ -1,6 +1,8 @@
 package beans;
 
-public class Owes {
+import java.io.Serializable;
+
+public class Owes implements Serializable{
     
     private Person debtor;
     private Person creditor;
