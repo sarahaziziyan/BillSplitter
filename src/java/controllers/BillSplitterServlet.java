@@ -5,6 +5,8 @@
  */
 package controllers;
 
+import beans.Expense;
+import beans.Person;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -20,15 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "BillSplitterServlet", urlPatterns = {"/BillSplitterServlet"})
 public class BillSplitterServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -61,25 +54,45 @@ public class BillSplitterServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+               
+        // read form fields  
+        String peopleString = "";
+        String peopleParam= request.getParameter("people");
+        String peopleNames[] = peopleParam.split(";");
+        Person people[] = new Person[peopleNames.length];
+        for (int i = 0; i < peopleNames.length; i++) {
+            people[i] = new Person(peopleNames[i],0,0);
+            peopleString += "<h2>Your names are: " + peopleNames[i] + "<br/>";
+        }
+        
+//        String expensesParam= request.getParameter("expenses");
+//        String expensesSplited[] = expensesParam.split(";");
+//        Expense expenses[] = new Expense[expensesSplited.length];
+//        for (int i = 0; i < expensesSplited.length; i++) {
+//            expenses[i] = new Person(expensesSplited[i], i, i)
+//        }
+//         
+//        System.out.println("username: " + username);
+//        System.out.println("password: " + password);
+// 
+//        // do some processing here...
+//         
+        // get response writer
+        PrintWriter writer = response.getWriter();
+//         
+        // build HTML code
+        String htmlRespone = "<html>"+peopleString+"</html>";
+         
+        // return response
+        writer.println(htmlRespone);
+        //processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
