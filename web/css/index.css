@@ -1,0 +1,24 @@
+#personContainer{
+    width : 200px;
+    min-height: 100px;
+}
+
+.personLabel{
+    width: 30px;
+    min-height: 20px;
+}
+
+.person{
+    width : 150px;
+    min-height: 20px;
+}
+
+#addPerson{
+    width : 50px;
+    height: 40px;    
+    border-radius: 20%;
+}
+
+botton{
+    background-color: #3dcbd0;
+}
