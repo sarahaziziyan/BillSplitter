@@ -11,7 +11,7 @@
     <body>
         <h1>Bill Splitter</h1>
         <div id="personContainer">
-            <div><label class="personLabel">Person:</label><input type="text" class="people"/></div>
+            <div><label class="personLabel">Person:</label><input type="text" class="person"/></div>
             
         </div>
         <input type="button" value="addPerson" id="addPerson"/>

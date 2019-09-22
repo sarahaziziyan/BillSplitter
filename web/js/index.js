@@ -2,8 +2,11 @@
 $(document).ready(function(){
     
     $("#submit").click(function(){
-        var people   = $(".person").val();
-    
+        var people = "";
+        $.each($(".person"),function(){
+            people += $(".person").val();  
+        })
+        
         $.post("BillSplitterServlet",
             {
                 people : people       
@@ -15,7 +18,7 @@ $(document).ready(function(){
     });
     
     $("#addPerson").click(function(){
-        var personHtml = "<div><label class='personLabel'>Person:</label><input type='text' class='people'/></div>";
+        var personHtml = "<div><label class='personLabel'>Person:</label><input type='text' class='person'/></div>";
         $("#personContainer").append($(personHtml));
             
     });
