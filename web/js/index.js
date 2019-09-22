@@ -1,12 +1,12 @@
 
 $(document).ready(function(){
     
-    $("#submit").click(function(){
+    $("#submit").click(function{
         var people   = $(".person").val();
     
         $.post("BillSplitterServlet",
             {
-                people : people       
+                people : people,        
             },
             function(mydata, status){
 
@@ -14,10 +14,10 @@ $(document).ready(function(){
         );
     });
     
-    $("#addPerson").click(function(){
-        var personHtml = "<div><label class='personLabel'>Person:</label><input type='text' class='people'/></div>";
-        $("#personContainer").append($(personHtml));
-            
+    $("#addPerson").click(function{
+        
+        
+    
     });
     
 });
