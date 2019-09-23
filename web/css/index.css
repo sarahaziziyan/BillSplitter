@@ -1,24 +1,39 @@
-#personContainer{
-    width : 400px;
-    min-height: 100px;
-}
-
-.personLabel{
+.sidecontainer label{
     width: 80px;
     min-height: 20px;
 }
 
-.person{
+.sidecontainer input[type=text],input[type=number]{
     width : 200px;
     min-height: 20px;
 }
 
 #addPerson{
-    width : 50px;
-    height: 40px;    
-    border-radius: 20%;
+    
 }
 
-botton{
+input[type=button]{
     background-color: #3dcbd0;
+    width : 100px;
+    height: 40px;    
+    border-radius: 10%;
+}
+
+.sidecontainer {
+    display: inline-block;    
+    height: 230px;
+    width: 490px;
+    border: solid 1px darkgrey;
+    border-radius: 10%;
+}
+
+.mainContainer{
+    width: 1000px;
+}
+
+.buttonContainer{
+    height: 60px;
+    width : 100px;
+    display: block;
+    margin-top: 10px;
 }
