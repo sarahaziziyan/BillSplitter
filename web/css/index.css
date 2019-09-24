@@ -1,15 +1,17 @@
 .sidecontainer label{
+    display: block;
     width: 80px;
     min-height: 20px;
 }
 
 .sidecontainer input[type=text],input[type=number]{
     width : 120px;
-    min-height: 20px;
+    min-height: 28px;
 }
 
-#addPerson{
-    
+.sidecontainer select{
+    width : 120px;
+    min-height: 28px;
 }
 
 input[type=button]{
@@ -22,9 +24,17 @@ input[type=button]{
 .sidecontainer {
     display: inline-block;    
     height: 230px;
-    width: 490px;
     border: solid 1px darkgrey;
     border-radius: 10%;
+}
+
+#personContainer{
+    width: 400px;
+}
+
+
+#expenseContainer{
+    width: 450px;
 }
 
 .mainContainer{
