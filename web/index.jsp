@@ -20,9 +20,9 @@
             </div>
             <div id="expenseContainer" class="sidecontainer">
                 <h2>Expenses</h2>
-                <div class='block'><label>Expense:</label><input type="text" class="expense" placeholder="What for?"/><input type="number" class="amount" placeholder="How much?"/></div>
+                <div class='block'><label>Expense:</label><input type="text" class="expense" placeholder="What for?"/><input type="number" class="amount" placeholder="How much?"/><select id='peopleSelectBox'></select></div>
                 <div class="buttonContainer">
-                    <input type="button" value="addEspense" id="addExpense"/>
+                    <input type="button" value="addExpense" id="addExpense"/>
                 </div>
             </div>
         </div>

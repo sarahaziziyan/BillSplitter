@@ -4,7 +4,7 @@
 }
 
 .sidecontainer input[type=text],input[type=number]{
-    width : 200px;
+    width : 120px;
     min-height: 20px;
 }
 
