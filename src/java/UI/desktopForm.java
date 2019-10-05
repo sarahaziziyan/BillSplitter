@@ -30,8 +30,8 @@ public class desktopForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         nameText = new javax.swing.JTextField();
         addPersonButton = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        personTextArea = new javax.swing.JTextArea();
+        personListbox = new javax.swing.JScrollPane();
+        personListBox1 = new javax.swing.JList<>();
         jPanel2 = new javax.swing.JPanel();
         peopleListComboBox = new javax.swing.JComboBox<>();
         forWhatTextField = new javax.swing.JTextField();
@@ -53,10 +53,7 @@ public class desktopForm extends javax.swing.JFrame {
             }
         });
 
-        personTextArea.setColumns(20);
-        personTextArea.setRows(5);
-        personTextArea.setEnabled(false);
-        jScrollPane1.setViewportView(personTextArea);
+        personListbox.setViewportView(personListBox1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,11 +62,11 @@ public class desktopForm extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(personListbox)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(nameText, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(addPersonButton, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1))
+                        .addComponent(addPersonButton, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -80,11 +77,15 @@ public class desktopForm extends javax.swing.JFrame {
                     .addComponent(nameText, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(addPersonButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addComponent(personListbox)
+                .addContainerGap())
         );
 
-        peopleListComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        peopleListComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                peopleListComboBoxActionPerformed(evt);
+            }
+        });
 
         forWhatTextField.setText("forWhat");
 
@@ -112,7 +113,7 @@ public class desktopForm extends javax.swing.JFrame {
                 .addComponent(forWhatTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(amountTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(177, Short.MAX_VALUE))
+                .addContainerGap(144, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -146,6 +147,10 @@ public class desktopForm extends javax.swing.JFrame {
     private void nameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTextActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nameTextActionPerformed
+
+    private void peopleListComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_peopleListComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_peopleListComboBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -188,9 +193,9 @@ public class desktopForm extends javax.swing.JFrame {
     private javax.swing.JTextField forWhatTextField;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameText;
     private javax.swing.JComboBox<String> peopleListComboBox;
-    private javax.swing.JTextArea personTextArea;
+    private javax.swing.JList<String> personListBox1;
+    private javax.swing.JScrollPane personListbox;
     // End of variables declaration//GEN-END:variables
 }
